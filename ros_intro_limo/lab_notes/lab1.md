@@ -1,59 +1,51 @@
 # Lab 1 Notes
 
-**NOTE**: BACKUP IMPORTANT FILES BEFORE YOU START ANY INSTALLATION 
+**IMPORTANT**: BACKUP IMPORTANT FILES BEFORE YOU START ANY INSTALLATION. NO ASSISTANCE WILL BE PROVIDED TO RECOVER YOUR FILES IN CASE OF DATA LOSS. 
 
 ## 1. Install Ubuntu 18.04 
 
 ### 1.1 Preparation 
 
-Setting up bootable USB for Ubuntu (Refer to the detailed guide section below to see how to set up) 
+You need to set up a bootable USB drive for Ubuntu installation. You need the following:
 
-4GB minimum (empty USB stick) 
+* A USB drive with a minimum capacity of 4GB
+* Ubuntu 18.04 Desktop Image 
+  - https://releases.ubuntu.com/18.04
+* Windows/Linux application for creating a bootable USB drive: Rufus or Etcher
+  - Rufus: https://rufus.ie/en/
+  - Etcher: https://www.balena.io/etcher
 
-Rufus/Etcher application (for creating live USB/disk of Ubuntu) 
+**IMPORTANT**: You will need to format the USB drive, so backup your data on the USB drive first.
 
-Ubuntu ISO image https://releases.ubuntu.com/18.04/ 
-
- 
-
-**Before installation, verify that your current system uses UEFI in the BIOS 
-
-If unable to boot from USB, try disabling secure boot/fast boot in BIOS 
+After creation, verify you can boot from your USB drive. Usually you can choose which disk to boot from by pressing F2 or F10 at the boot screen. Search the Internet for information specific to your computer brand and model. If unable to boot from USB, try disabling secure boot/fast boot in BIOS configuration.
 
 ### 1.2 Disk Partition 
 
 Suggested partitioning Size: 
 
-/(root): root partition, ext4 format, >=25GB 
-
-/swap: swap area,  
-
-If <2GB ram, use 2x the size of RAM 
-
-3GB – 6GB, use same size as RAM 
-
->8GB, use half the size of RAM 
-
-/home: ext4 format, allocate it rest of the free space (as much as possible) 
-
-This is the place where you put most of your work files 
+* **/**: root partition, ext4 format, >=25GB 
+* **swap**: swap area, 4~8G should be sufficient for most computers
+* **/home**: ext4 format, allocate it rest of the free space (as much as possible), this is the place where you put most of your work files 
 
 ### 1.3 Installation 
 
-You mostly only need to follow the Ubuntu installation guide and provide information such as user name, computer name, password etc. 
+You mostly only need to follow the Ubuntu installation guide and provide information such as user name, computer name, password etc.  
 
- 
+You're encouraged to refer to online materials for detailed guide for installing Ubuntu:  
 
-For detailed guide for installing Ubuntu and other methods of running Ubuntu:  
+* Dual Boot - https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/  
+* Bootable USB drive - https://itsfoss.com/intsall-ubuntu-on-usb/  
+* VM Oracle VirtualBox-  https://brb.nci.nih.gov/seqtools/installUbuntu.html#:~:text=Select%20your%20new%20virtual%20machine,this%20page%20for%20more%20information.  
 
-Dual Boot - https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/  
-
-Bootable USB stick - https://itsfoss.com/intsall-ubuntu-on-usb/  
-
-VM Oracle VirtualBox-  https://brb.nci.nih.gov/seqtools/installUbuntu.html#:~:text=Select%20your%20new%20virtual%20machine,this%20page%20for%20more%20information.  
+**NOTE**: Using virtual machine is not recommended for this course. You may encounter issues related to hardware access.
 
 ## 2. Install ROS Melodic 
  
-For Installation of ROS (After Ubuntu is installed) 
+For Installation of ROS, follow instructions at: http://wiki.ros.org/melodic/Installation/Ubuntu
 
-Run through ROS Installation from [ROS Wiki](http://wiki.ros.org/melodic/Installation/Ubuntu)
+Go through ROS Tutorial 1-4 after the installation is complete:
+
+* http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
+* http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem
+* http://wiki.ros.org/ROS/Tutorials/CreatingPackage
+* http://wiki.ros.org/ROS/Tutorials/BuildingPackages
